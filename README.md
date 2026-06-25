@@ -66,9 +66,6 @@ This is a module for FPS measurement.
 ### utils/tts.py
 This is a module for text-to-speech.
 
-### video tutorial.url
-Youtube tutorial explaining the original project.
-
 ### requirements.txt
 List of the main modules required to be installed.
 
