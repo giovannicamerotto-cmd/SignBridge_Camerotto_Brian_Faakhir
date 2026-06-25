@@ -141,6 +141,15 @@ keypoints are the shown white circles on screen corresponding to the fingers' la
 + Parameters:
 - number of training data classes: cell 3 > "NUM_CLASSES = 5"
 - classes names: open "[keypoint_classifier_label.csv](model/keypoint_classifier/keypoint_classifier_label.csv)" > each line correspond to a class label start counting from ID = 0
+- training data percentage: cell 6 > "train_size=0.75" means 75% of data is used for training and the remaining for validation
+- optimizer, loss function and validation metrics: cell 10 >
+```
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+```
 
 
 ### Finger gesture recognition training
@@ -160,11 +169,33 @@ keypoints are the shown green circles on screen corresponding to the fingers' ti
 - number of training data classes: cell 3 > "NUM_CLASSES = 5"
 - classes names: open "[point_history_classifier_label.csv](model/point_history_classifier/point_history_classifier_label.csv)" > each line correspond to a class label start counting from ID = 0
 - time steps (must be equivalent to "history_length") > cell 4 > "TIME_STEPS = 8"
-- architecture: cell 8 > "use_lstm = False". It is possible to switch between a fully connected neural network with and without Long Short-Term Memory. "CNN = False". It is possible also to use a Convolutional Neural Network.
+- architecture: cell 8 > "arch = "Transformer"", options:
+    - FC (fully connected)
+    - CNN (Convolutional Neural Network)
+    - Transformer [by default]
+- training data percentage: cell 7 > "train_size=0.75" means 75% of data is used for training and the remaining for validation
+- optimizer, loss function and validation metrics: cell 11 >
+```
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+```
 
 # References and Sitografy
 * [MediaPipe](https://mediapipe.dev/)
-* [Original GitHub repostery](https://github.com/kinivi/hand-gesture-recognition-mediapipe)
 * [Video Tutorial](https://youtu.be/7sywpZ7o2gg)
 * [USA handsign language official site](https://www.handspeak.com/)
+* [Original GitHub repostery](https://github.com/kinivi/hand-gesture-recognition-mediapipe)
 * [Final Project GitHub repostery](https://github.com/giovannicamerotto-cmd/SignBridge_Camerotto_Brian_Faakhir)
+
+the main changes from the original repostery are:
+- adaptation of the finger gesture system to all 5 fingers (previusly only the index finger)
+- addition of the CNN architecture option
+- text-to-speech system
+- registration of usefull finger gesture for our specific case
+- selection of more suitable parameters' values
+- adaptation of the code to different modules versions
+
+Copilot and Gemini AIs have been used for almost 80% of the coding part, the generated lines of code were then checked and corrected by us.
