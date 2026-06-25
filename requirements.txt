@@ -1,0 +1,7 @@
+mediapipe==0.10.35
+opencv-python==4.13.0.92
+scikit-learn==1.8.0
+tensorflow==2.21.0
+matplotlib==3.10.9
+pandas==3.0.3
+# This environment uses Python 3.10
