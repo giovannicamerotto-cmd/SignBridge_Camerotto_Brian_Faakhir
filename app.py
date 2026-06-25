@@ -11,10 +11,9 @@ import cv2 as cv
 import numpy as np
 import mediapipe as mp
 
-from utils import CvFpsCalc
+from utils import CvFpsCalc, TextToSpeech
 from model import KeyPointClassifier
 from model import PointHistoryClassifier
-from tts import TextToSpeech
 
 
 def get_args():
@@ -100,7 +99,7 @@ def main():
 
     # Coordinate history #################################################################
         # memorize up to 8 steps of fingertip positions
-    history_length = 10
+    history_length = 8
     finger_tip_history = deque(maxlen = history_length)
 
     # Finger gesture history ################################################
