@@ -66,16 +66,63 @@ This is a module for FPS measurement.
 ### utils/tts.py
 This is a module for text-to-speech.
 
+### video tutorial.url
+Youtube tutorial explaining the original project.
+
 ### requirements.txt
 List of the main modules required to be installed.
 
-### video tutorial.url
-Youtube tutorial explaining the original project.
+#### Installed modules:
+##### - numpy
+mathematical functions in python
+##### - jupyter
+To open notebooks and run cells
+##### - ipykernel
+Makes Jupyter work on Python 3.10
+cmd example:
+c:/Users/Acer/Documents/ComputerVision/Final-project/SignBridge-py/.venv310/Scripts/python.exe -m pip install ipykernel -U --force-reinstall
+##### - mediapipe
+MediaPipe is an open-source, cross-platform framework developed by Google that allows developers to build machine learning pipelines for processing streaming media, such as video, audio, and sensor data.
++ What MediaPipe Does:
+- Pose Estimation
+- Tracks human body posture
+- Hand Tracking
+- Face Mesh
+- Object Detection
+- Image & Selfie Segmentation
+##### - opencv
+Image and video analysis
+##### - sci-kit
+To train machine learning models and analyze data
++ Features:
+- Classification: Predicts discrete categories (e.g., email spam vs. legitimate).
+    Techniques: Support Vector Machines (SVM), Random Forests, Logistic Regression, k-Nearest Neighbors (k-NN), and Naive Bayes
+- Regression: Predicts continuous numerical values (e.g., house prices).
+    Techniques: Linear Regression, Ridge/Lasso Regression, and Gradient Boosting
+- Clustering: Groups unlabelled data based on shared traits (e.g., customer segmentation).
+    Techniques: k-Means, DBSCAN, and Hierarchical Clustering
+- Dimensionality Reduction: Simplifies large datasets by condensing features without losing critical data.
+    Techniques: Principal Component Analysis (PCA) and t-SNE
+##### - tensorflow
+Building and deploying machine learning and deep learning models
+AI techniques:
+- Deep Neural Networks (DNNs)
+- Convolutional Neural Networks (CNNs)
+- Recurrent Neural Networks (RNNs) & Transformers
+- Reinforcement Learning
+- Transfer Learning
+##### - matplotlib
+To visualize data in Python
+##### - seaborn
+To visualize data on matplotlib
+##### - pandas
+To do data manipulation and analysis
 
 
 
 # How to run the Program
 * on a terminal run ```& ".\.venv310\Scripts\python.exe" app.py```
+* to close the application press ESC
 
 
 
