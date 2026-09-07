@@ -118,7 +118,7 @@ To do data manipulation and analysis
 
 
 # How to run the Program
-* on a terminal run ```& ".\.venv310\Scripts\python.exe" app.py```
+* on a terminal run ```& ".\.venv310\Scripts\python.exe" app.py``` or run SignBridge_Team.exe
 * to close the application press ESC
 
 
